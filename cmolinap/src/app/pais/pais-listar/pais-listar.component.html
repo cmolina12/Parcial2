@@ -1,0 +1,40 @@
+<table class="table table-bordered">
+  <thead>
+    <th>#</th>
+    <th>Nombre</th>
+    <th>Capital</th>
+    <th>Año de conformacion</th>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let p of paises" (click)="verDetalle(p)" style="cursor: pointer;">
+      <td>
+        {{ p.id }}
+      </td>
+      <td>
+        {{ p.name }}
+      </td>
+
+      <td>
+        {{ p.capital }}
+      </td>
+
+      <td>
+        {{ p.formation_year }}
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="text-center mt-4" *ngIf="paisMasAntiguo">
+El país más antiguo es <strong>
+
+  {{paisMasAntiguo.name}} 
+</strong>
+y fue conformado en 
+
+<strong>
+{{paisMasAntiguo.formation_year}}
+</strong>
+
+</div>

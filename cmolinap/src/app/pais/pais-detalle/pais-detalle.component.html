@@ -1,0 +1,14 @@
+<ng-container *ngIf="pais">
+  <div class="card mx-auto mt-4" style="max-width: 20rem">
+    <img [src]="pais.flag" class="card-img-top" alt="{{ pais.name }}" />
+    <div class="card-body text-center">
+      <h5 class="card-title">
+        {{ pais.name }}
+      </h5>
+
+      <p class="card-text">
+        {{ pais.description }}
+      </p>
+    </div>
+  </div>
+</ng-container>
